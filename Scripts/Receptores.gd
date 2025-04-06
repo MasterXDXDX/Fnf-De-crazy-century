@@ -20,7 +20,7 @@ func check_note():
 	for note in hit_area.get_overlapping_areas():
 		if note.direction == name:
 			note.queue_free()
-			print("Nota golpeada:", name)
+			
 			# Añadir puntos: get_node("/root/main").add_score(100)
 			break
 

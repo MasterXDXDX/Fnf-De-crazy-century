@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" path="res://Scripts/Receptores.gd" id="2_53mrk"]
 [ext_resource type="Texture2D" uid="uid://ht3u3fb2mdub" path="res://Assets/Flechas/Receptores/left_strum.png" id="3_4ut5g"]
-[ext_resource type="AudioStream" uid="uid://bn87pjby6gx0d" path="res://Conciencia - Boy Wonder CF.mp3" id="4_5b01j"]
 [ext_resource type="Texture2D" uid="uid://yjjj6jjg3ejf" path="res://Assets/Flechas/Receptores/up_strum.png" id="4_obe83"]
 [ext_resource type="Texture2D" uid="uid://ch83iw0aawbt6" path="res://Assets/Flechas/Receptores/down_strum.png" id="5_4kfr8"]
 [ext_resource type="Script" path="res://Scripts/control.gd" id="5_mkor6"]
 [ext_resource type="Texture2D" uid="uid://87vkk85net6u" path="res://Assets/Flechas/Receptores/right_strum.png" id="6_ndeth"]
+[ext_resource type="AudioStream" uid="uid://d22i7k8eelmw8" path="res://3.mp3" id="7_mo4v3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_woifj"]
 atlas = ExtResource("3_4ut5g")
@@ -287,6 +287,30 @@ visible = false
 [node name="notas" type="Node2D" parent="."]
 
 [node name="Cancion" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_5b01j")
+stream = ExtResource("7_mo4v3")
+
+[node name="UI" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="PuntuacionText" type="Label" parent="UI"]
+offset_left = -553.0
+offset_top = -251.0
+offset_right = -519.0
+offset_bottom = -228.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 36
+text = "hola"
+
+[node name="ComboText" type="Label" parent="UI"]
+offset_left = -553.0
+offset_top = -201.0
+offset_right = -468.0
+offset_bottom = -151.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 36
+text = "hola
+"
 
 [connection signal="area_entered" from="Flechas/Arriba/Area2D" to="Flechas/Arriba" method="_on_hit_area_entered"]

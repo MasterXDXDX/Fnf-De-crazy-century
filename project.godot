@@ -15,13 +15,9 @@ run/main_scene="res://Escenas/EscenaPrincipal.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
-[autoload]
+[display]
 
-DiscordRPCLoader="*res://addons/discord-rpc-gd/nodes/discord_autoload.gd"
-
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/discord-rpc-gd/plugin.cfg")
+window/stretch/mode="viewport"
 
 [input]
 

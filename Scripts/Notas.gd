@@ -1,5 +1,5 @@
 extends Node2D
-var speed = -200
+var speed = -500
 var direction
 
 func _process(delta: float) -> void:
